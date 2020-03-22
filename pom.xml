@@ -4,8 +4,15 @@
   <artifactId>JSClosure2Interop</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <!-- Project dependencies -->
+  <!-- https://mvnrepository.com/artifact/com.google.jsinterop/jsinterop -->
   <!--  JUnit 5.0 -->
   <dependencies>
+  <dependency>
+        <groupId>com.google.jsinterop</groupId>
+        <artifactId>jsinterop</artifactId>
+        <version>1.0.2</version>
+        <type>pom</type>
+    </dependency>
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
