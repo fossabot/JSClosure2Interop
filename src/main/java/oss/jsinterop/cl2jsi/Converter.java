@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -14,6 +14,9 @@ import java.util.Collections;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.stream.Collectors;
+
+import com.google.googlejavaformat.java.Formatter;
+import com.google.googlejavaformat.java.FormatterException; 
 
 public class Converter {
 	
@@ -76,7 +79,7 @@ public class Converter {
 		return returnCode;
 	}
 	
-	public void unzipJar(String jarPath, String destinationDirPath) throws IOException {
+	public void unzipJar(String jarPath, String destinationDirPath) throws IOException, FormatterException {
 		File jarFile = new File(jarPath);
 		File destDir = new File(destinationDirPath);
 		System.out.println("jar to unzip: " + jarFile.getAbsolutePath());
@@ -110,8 +113,18 @@ public class Converter {
 				}
 				fos.close();
 				is.close();
+				if (fileName.endsWith(".java")) {
+					formatJava(fileName);
+				}
 			}
 		}
+	}
+	
+	public void formatJava(String javaFilePath) throws FormatterException, IOException {
+		Path path = Paths.get(javaFilePath);
+		String javaSource = new String(Files.readAllBytes(path));
+		String formattedSource = new Formatter().formatSource(javaSource);
+		Files.write(path, formattedSource.getBytes());
 	}
 
 	public String getStdOut() {

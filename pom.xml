@@ -3,16 +3,61 @@
   <groupId>oss.jsinterop</groupId>
   <artifactId>JSClosure2Interop</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+   <repositories>
+    <repository>
+        <id>central</id>
+        <name>Central Mvn Repository</name>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <layout>default</layout>
+        <snapshots>
+          <enabled>false</enabled>
+        </snapshots>
+    </repository>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+      <pluginRepository>
+        <id>central</id>
+        <url>https://repo1.maven.org/maven2</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+  <properties>
+      <maven.compiler.target>1.8</maven.compiler.target>
+      <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+  <build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.2</version>
+        </plugin>
+        <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>2.22.2</version>
+        </plugin>
+    </plugins>
+  </build>
   <!-- Project dependencies -->
-  <!-- https://mvnrepository.com/artifact/com.google.jsinterop/jsinterop -->
-  <!--  JUnit 5.0 -->
   <dependencies>
-  <dependency>
+     <!-- https://mvnrepository.com/artifact/com.google.jsinterop/jsinterop-annotations -->
+     <dependency>
         <groupId>com.google.jsinterop</groupId>
-        <artifactId>jsinterop</artifactId>
-        <version>1.0.2</version>
-        <type>pom</type>
+        <artifactId>jsinterop-annotations</artifactId>
+        <version>2.0.0</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.google.googlejavaformat/google-java-format -->
+    <dependency>
+        <groupId>com.google.googlejavaformat</groupId>
+        <artifactId>google-java-format</artifactId>
+        <version>1.7</version>
+    </dependency>
+    <!--  JUnit 5.0 -->
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
