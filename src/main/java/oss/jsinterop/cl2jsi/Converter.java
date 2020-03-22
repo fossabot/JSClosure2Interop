@@ -54,16 +54,21 @@ public class Converter {
 		}
 	}
 	
-	public int convert(String jsFilePath, String dependenciesFilePath, String generatedSourceJarPath, String packageName, String className) throws IOException, InterruptedException {
+	public int convert(String jsFilePath, String dependencyFiles, String dependencyMappingFilePath, String outputDependencyFilePath, String generatedSourceJarPath, String packageName, String className) throws IOException, InterruptedException {
 		String command = "java -jar " + generatorJar.getAbsolutePath()  + "\n"
-				+ "  --debug_mode" + "\n"
-				+ "  --strict"  + "\n"
 				+ "  --output " + generatedSourceJarPath  + "\n"
 				+ "  --package_prefix " + packageName  + "\n"
 				+ "  --extension_type_prefix " + "foo"  + "\n" //TODO: understand what it is used for
 				+ "  --global_scope_class_name "	+ className  + "\n"
-				+ "  --output_dependency_file " + dependenciesFilePath  + "\n"
-			    + "  " + jsFilePath;
+				+ "  --output_dependency_file " + outputDependencyFilePath  + "\n"
+				+ "  --dependency_mapping_file " + dependencyMappingFilePath  + "\n";
+		if (dependencyFiles != null) {
+			command += "  --dependency " + dependencyFiles  + "\n";
+		}
+		command += "  --debug_mode" + "\n";
+		command += "  --strict"  + "\n";
+		
+		command	+= "  " + jsFilePath; //the file to transpile
 		System.out.println("command: " + command);
 		command = command.replaceAll("\\n +", " ");
 		//System.out.println("command: " + command);
