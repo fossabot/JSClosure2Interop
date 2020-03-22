@@ -1,6 +1,8 @@
 # JSClosure2Interop
 Javascript Closures to Java Source Code (JSInterop Format)
 
+![Java CI with Maven](https://github.com/didier-durand/JSClosure2Interop/workflows/Java%20CI%20with%20Maven/badge.svg)
+
 This is WIIP : Work In Initial Progress. Patience required...
 
 This project uses two other projects to generate Java bindings respecting the JSInterop specs for standard Javasscript libraries:
