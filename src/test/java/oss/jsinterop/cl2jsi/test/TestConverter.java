@@ -82,7 +82,6 @@ public class TestConverter extends TestClass {
 		convert(jsFile,dependencyFiles,className);
 	}
 	
-	
 	@Test
 	public void testConvertW3cDom2() throws IOException, InterruptedException, FormatterException {
 		String jsFile = BROWSER + File.separator + "w3c_dom2.js";
@@ -115,7 +114,6 @@ public class TestConverter extends TestClass {
 		convert(jsFile,dependencyFiles,className);
 	}
 	
-	@Disabled("Failing")
 	@Test
 	public void testConvertNodejsMaps_v3_40() throws IOException, InterruptedException, FormatterException {
 		String jsFile = MAPS + File.separator + "google_maps_api_v3_40.js";
@@ -154,8 +152,6 @@ public class TestConverter extends TestClass {
 		convert(jsFile,className);
 	}
 	
-	
-	@Disabled("failing")
 	@Test
 	public void testConvertNodejsQueryString() throws IOException, InterruptedException, FormatterException {
 		String jsFile = NODEJS + File.separator + "querystring.js";
@@ -163,8 +159,6 @@ public class TestConverter extends TestClass {
 		convert(jsFile,className);
 	}
 	
-	
-	@Disabled("failing")
 	@Test
 	public void testConvertNodejsOs() throws IOException, InterruptedException, FormatterException {
 		String jsFile = NODEJS + File.separator + "os.js";
@@ -172,7 +166,6 @@ public class TestConverter extends TestClass {
 		convert(jsFile,className);
 	}
 	
-	@Disabled("type Object missing")
 	@Test
 	public void testConvertGeoJson() throws IOException, InterruptedException, FormatterException {
 		String jsFile = CONTRIB_EXTERNS + File.separator + "geojson.js";

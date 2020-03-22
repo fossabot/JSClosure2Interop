@@ -60,8 +60,9 @@ public class Converter {
 				+ "  --package_prefix " + packageName  + "\n"
 				+ "  --extension_type_prefix " + "foo"  + "\n" //TODO: understand what it is used for
 				+ "  --global_scope_class_name "	+ className  + "\n"
-				+ "  --output_dependency_file " + outputDependencyFilePath  + "\n"
-				+ "  --dependency_mapping_file " + dependencyMappingFilePath  + "\n";
+				+ "  --output_dependency_file "	+ outputDependencyFilePath  + "\n"
+				//+ "  --dependency_mapping_file " + dependencyMappingFilePath  + "\n"
+				;
 		if (dependencyFiles != null) {
 			command += "  --dependency " + dependencyFiles  + "\n";
 		}
