@@ -12,9 +12,10 @@ import com.google.googlejavaformat.java.FormatterException;
 
 import oss.jsinterop.cl2jsi.Converter;
 
-public class TestConverter {
-	
-	public static final String EXTERNS = "google-closure-compiler" + File.separator + "contrib" + File.separator + "externs";
+public class TestConverter extends TestClass {
+	public static final String CONTRIB = "google-closure-compiler" + File.separator + "contrib";
+	public static final String NODEJS = CONTRIB  + File.separator + "nodejs";
+	public static final String EXTERNS = CONTRIB  + File.separator + "externs";
 	public static final String MAPS = EXTERNS + File.separator + "maps";
 	
 	@Test
@@ -27,6 +28,23 @@ public class TestConverter {
 	public void testConvertAsync_2_0() throws IOException, InterruptedException, FormatterException {
 		String jsFile = EXTERNS + File.separator + "async-2.0.js";
 		String className = "Async_2_0";
+		convert(jsFile,className);
+	}
+	
+	
+	@Test
+	public void testConvertNodejsPath() throws IOException, InterruptedException, FormatterException {
+		String jsFile = NODEJS + File.separator + "path.js";
+		String className = "NodejsPath";
+		convert(jsFile,className);
+	}
+	
+	
+	@Disabled("failing")
+	@Test
+	public void testConvertNodejsOs() throws IOException, InterruptedException, FormatterException {
+		String jsFile = NODEJS + File.separator + "os.js";
+		String className = "NodejsOs";
 		convert(jsFile,className);
 	}
 	
