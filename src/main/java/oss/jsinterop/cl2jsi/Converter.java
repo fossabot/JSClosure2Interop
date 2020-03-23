@@ -49,7 +49,7 @@ public class Converter {
 	
 	public boolean check() throws Exception {
 		if (!generatorJar.exists()) {
-			throw new Exception("jar does not exist: " + generatorJar.getAbsolutePath().toString());
+			throw new IOException("jar does not exist: " + generatorJar.getAbsolutePath().toString());
 		}
 		return true;
 	}

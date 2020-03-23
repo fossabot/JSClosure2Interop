@@ -33,7 +33,7 @@ public class TestConverter extends TestClass {
 	}
 	
 	@Test
-	public void testConvertAsync_2_0() throws IOException, InterruptedException, FormatterException {
+	public void testConvertAsyncV20() throws IOException, InterruptedException, FormatterException {
 		String jsFile = CONTRIB_EXTERNS + File.separator + "async-2.0.js";
 		String className = "Async_2_0";
 		assertEquals(0,convert(jsFile,className));
@@ -147,7 +147,7 @@ public class TestConverter extends TestClass {
 	}
 	
 	@Test
-	public void testConvertNodejsMaps_v3_40() throws IOException, InterruptedException, FormatterException {
+	public void testConvertNodejsMapsV340() throws IOException, InterruptedException, FormatterException {
 		String jsFile = MAPS + File.separator + "google_maps_api_v3_40.js";
 		List<String> dependencyFiles = Arrays.asList(
 				                            //CONTRIB_EXTERNS + File.separator + "chrome_extensions.js"
