@@ -55,10 +55,32 @@ public class TestConverter extends TestClass {
 	}
 	
 	@Test
+	public void testConvertGeoJson() throws IOException, InterruptedException, FormatterException {
+		String jsFile = CONTRIB_EXTERNS + File.separator + "geojson.js";
+		String className = "GeoJson";
+		convert(jsFile,className);
+	}
+	
+	
+
+	@Test
+	public void testConvertW3cEvent() throws IOException, InterruptedException, FormatterException {
+		String jsFile = BROWSER + File.separator + "w3c_event.js";
+		String className = "W3cTrustedTypes";
+		List<String> dependencyFiles = Arrays.asList(
+				BROWSER + File.separator + "w3c_event.js"
+			);
+		convert(jsFile,className);
+	}
+	
+	@Test
 	public void testConvertW3cTrustedTypes() throws IOException, InterruptedException, FormatterException {
 		String jsFile = BROWSER + File.separator + "w3c_trusted_types.js";
 		String className = "W3cTrustedTypes";
-		convert(jsFile,className);
+		List<String> dependencyFiles = Arrays.asList(
+				BROWSER + File.separator + "w3c_event.js"
+			);
+		convert(jsFile,dependencyFiles,className);
 	}
 	
 	@Test
@@ -165,13 +187,6 @@ public class TestConverter extends TestClass {
 	public void testConvertNodejsQueryString() throws IOException, InterruptedException, FormatterException {
 		String jsFile = NODEJS + File.separator + "querystring.js";
 		String className = "NodejsQueryString";
-		convert(jsFile,className);
-	}
-	
-	@Test
-	public void testConvertGeoJson() throws IOException, InterruptedException, FormatterException {
-		String jsFile = CONTRIB_EXTERNS + File.separator + "geojson.js";
-		String className = "GeoJson";
 		convert(jsFile,className);
 	}
 	
