@@ -1,4 +1,4 @@
-<img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/js-logo.jpg" height="100"><img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/gwt-logo.png" height="100"><img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/java-logo.png" height="100">
+<img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/js-logo.jpg" height="100">   <img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/gwt-logo.png" height="100"><img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/java-logo.png" height="100">
 
 # JSClosure2Interop
 
