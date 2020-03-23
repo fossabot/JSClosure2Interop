@@ -12,6 +12,7 @@ public class TestClass {
 	public void setup() throws Exception {
 		assumeTrue((System.getenv("GITHUB_ACTION") == null)
 				&& (System.getenv("GITHUB_WORKFLOW") == null)); //not running on Github
+		assumeTrue(System.getenv("TRAVIS") == null); // not on travis-ci.org
 		Converter converter = new Converter();
 		converter.check();
 	}
