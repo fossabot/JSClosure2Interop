@@ -1,13 +1,12 @@
-<img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/js-logo.png" height="96"><img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/gwt-logo.png" height="96"><img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/java-logo.png" height="96">
-
+<img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/js-logo.jpg" height="96"><img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/gwt-logo.png" height="96"><img src="https://github.com/didier-durand/JSClosure2Interop/blob/master/img/java-logo.png" height="96">
 
 # JSClosure2Interop
+
+![Java CI with Maven](https://github.com/didier-durand/JSClosure2Interop/workflows/Java%20CI%20with%20Maven/badge.svg)
 
 Javascript Closures to Java Source Code (JSInterop Format)
 
 Twitter: [@didierdurand](https://twitter.com/chaingrok)
-
-![Java CI with Maven](https://github.com/didier-durand/JSClosure2Interop/workflows/Java%20CI%20with%20Maven/badge.svg)
 
 This is WIP : Work In Progress. Patience required.
 
@@ -18,6 +17,8 @@ This project uses two other projects to generate Java bindings respecting the JS
 
 1) https://github.com/google/jsinterop-generator : The jsinterop generator is a java program that takes closure extern files as input and generates Java classes annotated with JsInterop annotations.
 2) https://github.com/google/closure-compiler : Javascript interfaces of widely-used Javascript libraries produced by the Javascript Closure Compiler (produced by Google)
+
+Description of JSInterop annotations : [JsInterop v1.0: Nextgen GWT/JavaScript Interoperability(https://docs.google.com/document/d/10fmlEYIHcyead_4R1S5wKGs1t2I7Fnp_PaNaa7XTEk0/edit#heading=h.o7amqk9edhb9)
 
 JSInterop Annotations : https://docs.google.com/document/d/10fmlEYIHcyead_4R1S5wKGs1t2I7Fnp_PaNaa7XTEk0/edit#heading=h.o7amqk9edhb9
 
