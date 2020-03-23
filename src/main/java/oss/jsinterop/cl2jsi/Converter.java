@@ -47,11 +47,11 @@ public class Converter {
 		generatorJar = generatorJarPath.toFile();
 	}
 	
-	public void check() throws Exception {
-		
+	public boolean check() throws Exception {
 		if (!generatorJar.exists()) {
 			throw new Exception("jar does not exist: " + generatorJar.getAbsolutePath().toString());
 		}
+		return true;
 	}
 	
 	public int convert(String jsFilePath, String dependencyFiles, String dependencyMappingFilePath, String outputDependencyFilePath, String generatedSourceJarPath, String packageName, String className) throws IOException, InterruptedException {
