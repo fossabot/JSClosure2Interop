@@ -2,7 +2,7 @@
 
 # JSClosure2Interop
 
-![Java CI with Maven](https://github.com/didier-durand/JSClosure2Interop/workflows/Java%20CI%20with%20Maven/badge.svg)
+[![Build Status](https://travis-ci.org/didier-durand/JSClosure2Interop.svg?branch=master)](https://travis-ci.org/didier-durand/JSClosure2Interop)![Java CI with Maven](https://github.com/didier-durand/JSClosure2Interop/workflows/Java%20CI%20with%20Maven/badge.svg)
 
 Javascript Closures to Java Source Code (JSInterop Format)
 
