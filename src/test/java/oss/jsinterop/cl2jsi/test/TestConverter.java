@@ -45,6 +45,15 @@ public class TestConverter extends TestClass {
 		convert(jsFile,className);
 	}
 	
+	//failing tests
+	
+	@Test
+	public void testConvertNodejsOs() throws IOException, InterruptedException, FormatterException {
+		String jsFile = NODEJS + File.separator + "os.js";
+		String className = "NodejsOs";
+		convert(jsFile,className);
+	}
+	
 	@Test
 	public void testConvertW3cTrustedTypes() throws IOException, InterruptedException, FormatterException {
 		String jsFile = BROWSER + File.separator + "w3c_trusted_types.js";
@@ -156,13 +165,6 @@ public class TestConverter extends TestClass {
 	public void testConvertNodejsQueryString() throws IOException, InterruptedException, FormatterException {
 		String jsFile = NODEJS + File.separator + "querystring.js";
 		String className = "NodejsQueryString";
-		convert(jsFile,className);
-	}
-	
-	@Test
-	public void testConvertNodejsOs() throws IOException, InterruptedException, FormatterException {
-		String jsFile = NODEJS + File.separator + "os.js";
-		String className = "NodejsOs";
 		convert(jsFile,className);
 	}
 	
