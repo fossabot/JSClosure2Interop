@@ -6,9 +6,9 @@
 
 Javascript Closures to Java Source Code (JSInterop Format)
 
-Twitter: [@didierdurand](https://twitter.com/chaingrok)
+Twitter: [@didierdurand](https://twitter.com/didierdurand)
 
-This is WIP : Work In Progress. Patience required.
+This is Work In Progress (WIP). Patience required.
 
 This project uses two other projects to generate Java bindings respecting the JSInterop specs for standard Javasscript libraries:
 
