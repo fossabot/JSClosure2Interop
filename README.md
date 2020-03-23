@@ -3,6 +3,7 @@
 # JSClosure2Interop
 
 [![Travis Build Status](https://travis-ci.org/didier-durand/JSClosure2Interop.svg?branch=master)](https://travis-ci.org/didier-durand/JSClosure2Interop) ![Github Build Status](https://github.com/didier-durand/JSClosure2Interop/workflows/Java%20CI%20with%20Maven/badge.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b913546401e14f91ad2d6114af2d165c)](https://www.codacy.com/manual/durand.didier/JSClosure2Interop?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=didier-durand/JSClosure2Interop&amp;utm_campaign=Badge_Grade)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdidier-durand%2FJSClosure2Interop.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdidier-durand%2FJSClosure2Interop?ref=badge_shield)
 
 Javascript Closures to Java Source Code (JSInterop Format)
 
@@ -29,3 +30,7 @@ Parameters for ClosureJsinteropGenerator_deploy.jar
 -   --package_prefix : package name for generated classes
 -   --global_scope_class_name : head class name
 -   --output_dependency_file : dependency file
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdidier-durand%2FJSClosure2Interop.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdidier-durand%2FJSClosure2Interop?ref=badge_large)
